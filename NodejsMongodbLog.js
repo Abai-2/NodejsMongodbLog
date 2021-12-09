@@ -13,6 +13,8 @@ const mydata = mongoose.model('cats1', schema);
 
 const kitty = new mydata({ name: 'Zildjian2' });
 kitty.save()
+const kitty1 = new mydata({ name: 'Zildjian1' });
+kitty1.save()
 
 app.use('/', express.static('public'))
 app.get("/input",(req,res)=>{
