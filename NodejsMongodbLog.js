@@ -1,6 +1,7 @@
 const { query } = require("express");
 const express = require("express")
 const app = express()
+const ejs=require("ejs")
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://172.21.2.236:27017/190110910126');
 
@@ -23,5 +24,8 @@ app.get("/input", (req, res) => {
     console.log(req.query)
     const kitty = new mydata({ name: req.query.first,health:req.query.second});
     kitty.save()
+    ejs.renderFile("result.html",{returnVal:"success"},(err,str)=>{
+        res.send(str)
+    })
 })
 app.listen(10126)

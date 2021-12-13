@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initia-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <p>---------------190110910126mongodb操作-------------------</p>
+    <form name="myForm" action="/input" method="GET">
+        数据1：<input type="text" name="first"><br>
+        数据2：<input type="text" name="second"><br>
+        <input type="submit" name="submit1" value="读取">
+        <input type="submit" name="submit1" value="写入">
+    </form>
+    <p><%= returnVal %></p>
+
+
+</body>
+
+</html>
+
+
+
+
+<!-- <p>------------------GET-------------------</p>
+
+<form name="myFormGet" action="/input"
+onsubmit="return validateForm()" method="GET">
+输入a：<input type="text" name="first" ><br>  
+输入b：<input type="text" name="second" ><br>
+<input type="submit" name="submit1" value="+" >
+<input type="submit" name="submit1" value="-" >
+<input type="submit" name="submit1" value="*" >
+<input type="submit" name="submit1" value="/" >
+</form>
+
+<p>-------------------------------------</p>
+<script>
+
+function validateForm() {
+        var x = document.forms["myFormGet"]["a"].value;
+        //if (x == null || x == ""||typeof(x)==String) {
+        
+        if(parseFloat(x).toString()==='NaN'){
+            alert("请输入一个数字"+parseFloat(x));
+            return false;
+        }
+        var y = document.forms["myFormGet"]["b"].value;
+        if(parseFloat(y).toString()==='NaN'){
+            alert("请输入一个数字"+parseFloat(y));
+            return false;
+        }
+    }
+
+
+
+    function validateForm() {
+        var x = document.forms["myForm"]["a"].value;
+        //if (x == null || x == ""||typeof(x)==String) {
+        
+        if(parseFloat(x).toString()==='NaN'){
+            alert("请输入一个数字"+parseFloat(x));
+            return false;
+        }
+        var y = document.forms["myForm"]["b"].value;
+        if(parseFloat(y).toString()==='NaN'){
+            alert("请输入一个数字"+parseFloat(y));
+            return false;
+        }
+    }
+    </script> -->
