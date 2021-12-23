@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>首页</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <!-- <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+        <!-- <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script> -->
+    </head>
+    <body>
+        <!-- % if userInfo._id%
+        <div>
+            % if userInfo.isAdmin%
+            <h1 style="color: red;" class="bg">{{userInfo.username}},你好，管理员</h1>
+            <a href="/admin">进入管理</a>
+            % else%
+            <h1 style="color: red;" class="bg">{{userInfo.username}},你好，欢迎登陆</h1>
+            % endif%
+            <button @click="logout">退出</button>
+        </div>
+        % else % -->
+        <div class="content">
+            <h2>Welcome to WQ's System</h2>
+            <div class="content1">
+                <a href="/login" class="login">登录</a>
+                <a href="/login/register" class="register">注册</a>
+            </div>
+        </div>
+    </body>
+</html>

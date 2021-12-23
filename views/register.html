@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>login</title>
+        <link rel="stylesheet" href="/css/login.css">
+    </head>
+    <body>
+        <div class="container">
+            <form name="myForm"  action="/login/doRegister" onsubmit="return validateForm()" method="post" >
+                <h2>用户注册</h2>
+                <input type="text" name="name" id="UserName" placeholder="UserName">
+                <input type="password" name="password" id="PassWord" placeholder="PassWord">
+                <!-- <input type="text" name="isAdmin" id="isAdmin" placeholder="isAdmin"> -->
+                <input type="submit" value="Register" id="Login">
+            </form>
+        </div>
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["name"].value;
+                //if (x == null || x == ""||typeof(x)==String) {
+                
+                if(x==="admin"){
+                    alert("请重新定义您的用户名");
+                    return false;
+                }
+                
+            }
+            </script>
+    </body>
+</html>

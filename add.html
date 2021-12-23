@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加用户</title>
+    <style>
+        .container{
+            width: 80vw;
+            margin: 20px auto;
+        }
+        h3{
+            font-size: 29px;
+            font-weight: normal;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .form-group input{
+            width: 80vw;
+            
+            height: 20px;
+        }
+        label.label{
+            display: block;
+            font-weight:600;
+            margin: 10px 0;
+        }
+        button{
+            margin: 20px 0;
+            background-color: #2f80bc;
+            color:white;
+            font-size: 17px;
+            padding: 4px 8px;
+            border:0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>添加用户</h3>
+        <form method="post" action="/add">
+            <div class="form-group">
+                <label class="label">用户名</label>
+                <input type="text" id='name' name="name" class="form-control" placeholder="请填写用户名">
+            </div>
+            <div class="form-group">
+                <label class="label">密码</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="请输入密码">
+            </div>
+            <div class="form-group">
+                <label class="label">年龄</label>
+                <input type="number"name="age" id="age" class="form-control" placeholder="请填写年龄" max="120" min="0">
+            </div>
+            <div class="form-group">
+                <label class="label">邮箱</label>
+                <input type="email" name="email" class="form-control" placeholder="请输入邮箱" id="email">
+            </div>
+            <div>
+                <label class="label">请选择爱好</label>
+            </div>
+            <div id="checkbox-container">
+                <input type="checkbox" name="hobbies" id="bask" value="篮球"> <label for="bask">篮球</label>
+                <input type="checkbox" name="hobbies" id="code" value="coding"> <label for="code">coding</label>
+                <input type="checkbox" name="hobbies" id="ping" value="乒乓"> <label for="ping">乒乓球</label>
+                <input type="checkbox" name="hobbies" id="sing" value="唱歌"> <label for="sing">唱歌</label>
+                <input type="checkbox" name="hobbies" id="draw" value="画画"> <label for="draw">画画</label>
+            </div>
+            <button>添加用户</button>
+        </form>
+    </div>
+</body>
+</html>
